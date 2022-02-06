@@ -9,7 +9,7 @@ public class Calculator extends JFrame { //JFrame 상속
     private JTextField inputSpace;
     private String num = ""; //계산식의 숫자를 담음
     private String prev_operation = ""; // 작동 기억하도록 변수 하나 생성
-    private ArrayList<String> equation = new ArrayList<String>();
+    private ArrayList<String> equation = new ArrayList<String>(); // 숫자와 연산 기호를 구분해서 담음
 
     public Calculator() {
         setLayout(null); // 기본 레이아웃 관리자 제거
@@ -64,6 +64,7 @@ public class Calculator extends JFrame { //JFrame 상속
             buttonPanel.add(buttons[i]);
         }
 
+        // 패널에 추가
         add(inputSpace);
         add(buttonPanel);
         add(userNameInfo);
@@ -87,10 +88,10 @@ public class Calculator extends JFrame { //JFrame 상속
     class PadActionListener implements ActionListener {
 
         @Override
-        public void actionPerformed(ActionEvent e) {
+        public void actionPerformed(ActionEvent e) { // 이벤트 처리
             String operation = e.getActionCommand(); //어떤 버튼 눌렸는지 받아옴
 
-            if (operation.equals("C")) { //만약 눌린 게 c번트이라면면
+            if (operation.equals("C")) { //만약 눌린 게 C버튼이라면 계산식 내용을 지워줌
                 inputSpace.setText("");
             } else if (operation.equals("=")) { //만약 눌린 게 =이라면 입력된 식을 계산해 계산값이 나오도록 함
                 String result = Double.toString(calculate(inputSpace.getText())); //계산 기능
@@ -109,7 +110,7 @@ public class Calculator extends JFrame { //JFrame 상속
         }
     }
 
-
+    // 숫자 & 연산자
     private void fullTextParsing(String inputText) {
         equation.clear();
 
@@ -130,7 +131,7 @@ public class Calculator extends JFrame { //JFrame 상속
 
     //    계산기능
     public double calculate(String inputText) {
-        fullTextParsing((inputText));
+        fullTextParsing(inputText);
 
         double prev = 0;
         double current = 0;
@@ -142,7 +143,7 @@ public class Calculator extends JFrame { //JFrame 상속
 //            =====음수로 나오는 게 여기가 문제=====
             if (s.equals("+")) {
                 mode = "add";
-            } // else if (s.equals("-")) {mode = "sub";} // <= 이거 입력하면 마이너스로 계산이 됨
+            } //else if (s.equals("-")) { mode = "sub"; } // <= 이거 입력하면 마이너스로 계산이 됨
             else if (s.equals("÷")) {
                 mode = "div";
             } else if (s.equals("×")) {
