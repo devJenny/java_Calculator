@@ -19,7 +19,7 @@
 ![image](https://user-images.githubusercontent.com/90188412/152694381-54cda9e7-9d36-4fea-a5df-221e5bd86d1a.png)
 
 <br>
-<p> 👉 minus </p>
+<p> 👉 Minus </p>
 
 ![image](https://user-images.githubusercontent.com/90188412/152694392-cb81c79d-f4cc-4264-8ebf-72c77cc8713b.png)
 ![image](https://user-images.githubusercontent.com/90188412/152694399-d494fc66-a359-41f6-94d9-66c332ea4260.png)
