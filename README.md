@@ -1,7 +1,7 @@
 # java_Calculator
 <br>
-## Calculator
-<p> Date : 2021. 10. 19. ~ 2021. 10. 22. </p>
+<h3> Calculator</h3>
+<p> <b> Date : 2021. 10. 19. ~ 2021. 10. 22. </b> </p>
 <br>
 <p> language: JAVA </p>
 <p> OS: windows 10 </p>
